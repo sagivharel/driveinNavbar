@@ -1,0 +1,131 @@
+:root{
+  --neon: #fda32e;
+
+}
+
+body {
+  font-family: Helvetica, Arial, Century;
+  font-size: 12px;
+  margin: 0;
+  background-color: black;
+  margin-top: 90px;
+}
+
+#header {
+  background-color: black;
+  height: 76px;
+  margin: auto;
+  border-top: 3px solid #1f1f1f;
+  border-bottom: 3px solid #1f1f1f;
+  animation-name: neonWake;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  animation-timing-function: cubic-bezier(0, 1.03, 0, 1.02);
+}
+
+@keyframes neonWake {
+  0% {
+    border-top-color: #1f1f1f;
+    border-bottom-color: #1f1f1f;
+  }
+11% {
+  border-top-color: var(--neon);
+  border-bottom-color: var(--neon);
+  box-shadow: 0 0 10px var(--neon)
+}
+
+12% {
+  border-top-color: #1f1f1f;
+  border-bottom-color: #1f1f1f;
+}
+
+  17% {
+    border-top-color: var(--neon);
+    border-bottom-color: var(--neon);
+    box-shadow: 0 0 10px var(--neon)
+  }
+  19%{
+    border-top-color: #1f1f1f;
+    border-bottom-color: #1f1f1f;
+  }
+
+  40% {
+    border-top-color: var(--neon);
+    border-bottom-color: var(--neon);
+    box-shadow: 0 0 10px var(--neon)
+  }
+  42% {
+    border-top-color: #1f1f1f;
+    border-bottom-color: #1f1f1f;
+  }
+  100% {
+    border-top-color: var(--neon);
+    border-bottom-color: var(--neon);
+    box-shadow: 0 0 10px var(--neon)
+  }
+}
+
+#header ul {
+  margin: 0 auto;
+  width: 800px;
+  padding: 30px 12px;
+  list-style: none;
+}
+
+#header li {
+  float: right;
+}
+
+#header li:nth-child(1) {
+  margin-right: 85px;
+}
+
+#header a {
+  padding: 0 14px;
+  text-align: center;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all .2s ease-in;
+  
+}
+
+#header a:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #8d1227;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+  #header a:hover:after {
+  transform: scaleX(1);
+}
+
+#header li:nth-child(1) a,
+#header li:nth-child(4) a{
+  border-left: 1px solid white;
+}
+
+#header ul li a.logo {
+  background: url("/bgimg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 140px;
+  display: block;
+  width: 245px;
+  margin-top: -60px;
+  padding: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
